@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+		<title>Lycée Charlie Chaplin - Informatique et Sciences du numérique</title>
+		<meta name="description" content="Script jQuery " />
+		<meta name="Robots" content="noindex, nofollow, nosnippet"/>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a href="index.html" class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li> <a href="index.html" class="gn-icon">Accueil</a> </li>
+								<li class="gn-search-item">
+									<a href="TCP-IP.html" class="gn-icon gn-icon-download">Le modèle TCP/IP (OSI)</a>
+									<ul class="gn-submenu">
+										<li><a href="fichiers/doc_ressource.pdf" target=_blank class="gn-icon gn-icon-article">Documents de cours</a></li>
+										<li><a href="exercices.html" target=_self class="gn-icon gn-icon-cog">Fiche d'exercices</a></li>
+									
+										
+									</ul>
+								</li>
+								<li class="gn-search-item">
+									<a href="filius.html" class="gn-icon gn-icon-download">Simulation d'un réseau</a>
+									<ul class="gn-submenu">
+										<li><a href="fichiers/Filius/Simulation_Filius.pdf" target=_blank class="gn-icon gn-icon-article">Fiche de l'activité</a></li>
+										<li><a href="fichiers/Filius/filius-1.7.2_portable.zip" target=_blank class="gn-icon gn-icon-cog">Téléchargement du logiciel</a></li>
+										<li><a href="fichiers/Filius/activite4_ressources.fls" target=_blank class="gn-icon gn-icon-cog">Fichier ressource Activité 4</a></li>
+									</ul>
+								</li >
+								<li class="gn-search-item">
+									<a href="reseau_et_python.html" class="gn-icon gn-icon-download">Réseaux et Python</a>
+									
+								</li >
+								<li class="gn-search-item">
+									<a href="glossaire.html" class="gn-icon gn-icon-archive">Glossaire</a>
+							
+								</li >
+							</ul>
+						</div>
+					</nav>
+				</li>
+				<li><a href="http://www.lyceecharliechaplin.com" target=_blank>Lycée Charlie Chaplin - ISN</a></li>
+			</ul>
+			<header>
+				<h1><strong>Glossaire</strong><span>Des infos supplémentaires sont disponibles en suivant les liens.</span></h1>
+				<a href="http://www.csstitanic.com/" target=_blank><img class=img_flotte src="img/luca-bravo-217276.jpg" align="right"; width="600px" height="auto"></a>
+			</header>
+			<article>
+				<h1>Local Area Network</h1>
+				<h3>Un réseau local (LAN) est un réseau informatique à une échelle géographique relativement restreinte, 
+				par exemple une salle informatique, une habitation particulière, un bâtiment ou un site d'entreprise.</h3>
+				<br>
+				<h1>Ethernet</h1>
+				<h3>Ethernet est un protocole de réseau local (topologie en bus). Il a été standardisé sous le nom IEEE 802.3 (niveau trame).
+					Depuis les années 1990, on utilise très fréquemment Ethernet sur paires torsadées (câble cuivre) pour la connexion des postes clients.
+					La prise de connexion la plus utilisée à l'heure actuelle est la RJ45. plus flexible, le wifi (IEEE 802.11)remplace de plus en plus les réseaux câblées </h3>
+				<br>
+				<h1><a href="fichiers/glossaire/fiche_arp.pdf" target=_blank>Adresse MAC</a></h1>
+				<h3>Une adresse MAC (Media Access Control address) est un identifiant physique stocké dans une carte réseau ou une interface réseau et utilisé pour attribuer 
+					mondialement une adresse unique (codé sur 48 bits). L'adresse MAC est utilisée dans les trames transmises.</h3>
+				<br>
+				<h1><a href="fichiers/glossaire/fiche_ip.pdf" target=_blank>Adresse IP</a></h1>
+				<h3>Une adresse IP (Internet Protocol) est le numéro qui identifie chaque équipement connecté à un réseau IP (réseau informatique utilisant l’Internet Protocol). 
+				Il existe des adresses IP de version 4 (codées sur 32 bits) et de version 6 (codée sur 128 bits). L'adresse de version 4 est actuellement la plus utilisée : 
+				elle est généralement notée avec quatre nombres compris entre 0 et 255, séparés par des points (exemple : 193.83.153.144).</h3>
+				<h3>Il existe des adresses IP spécifiques et parmi elle, il y a le <a href="https://fr.wikipedia.org/wiki/Localhost" target=_blank><strong>localhost</strong></a>. Il correspond à la machine elle-même qui répond à l'adresse IPv4 : <code>127.0.0.1</code>.
+				Cette adresse est utile en phase de test ou d'hébergement d'un serveur.</h3>
+				<br>
+				<h1>Port</h1>
+				<h3>Un numéro de port sert à identifier l'application (un processus) en cours de communication par l'intermédiaire de son protocole de couche application (associé au service utilisé, exemple : 80 pour HTTP).
+					Pour chaque port, un numéro lui est attribué (codé sur 16 bits), ce qui implique qu'il existe un maximum de 65 536 ports (2^16) par ordinateur (et par protocoles <a href="fichiers/glossaire/fiche_tcp_udp.pdf" target=_blank>TCP et UDP</a>). L'attribution des ports est faite par le système d'exploitation, sur demande d'une application. Cette dernière peut demander à ce que le système d'exploitation lui attribue n'importe quel port, à condition qu'il ne soit pas déjà attribué.
+					Lorsqu'un logiciel client veut dialoguer avec un logiciel serveur, aussi appelé service, il a besoin de connaître le port écouté par ce dernier. Les ports utilisés par les services devant être connus par les clients, les principaux types de services utilisent des ports qui sont dits réservés. Une liste des ports attribués est disponible dans le fichier /etc/services sous Unix/Linux. Les ports les plus connus et les plus utiles sont notamment :
+				<ul>
+					<li> 21, pour l'échange de fichiers via <a href="fichiers/glossaire/fiche_ftp.pdf" target=_blank>FTP</a>
+					<li> 23, pour le port telnet
+					<li> 25, pour l'envoi d'un courrier électronique via un serveur dédié SMTP
+					<li> 80, pour la consultation d'un serveur <a href="fichiers/glossaire/fiche_http.pdf" target=_blank>HTTP</a> par le biais d'un navigateur web
+					<li> 110, pour la récupération de son courrier électronique via POP
+				</ul>
+				</h3>
+				<br>
+				<h1><a href="fichiers/glossaire/fiche_nat.pdf" target=_blank>Passerelle</a></h1>
+				<h3>Une passerelle (gateway) est un dispositif permettant de relier deux réseaux informatiques, comme par exemple un réseau local et Internet. 
+				Cependant, le terme passerelle (sans autre précision) est couramment employé comme exact synonyme du terme routeur. Par exemple, on parle de passerelle par défaut (default gateway) ou gateway IP pour désigner un routeur qui interconnecte deux réseaux IP. 
+				Le routeur est un équipement réseau qui permet de relayer les paquets d'un réseau vers un autre.
+				</h3>
+				<br>
+				<h1><a href="fichiers/glossaire/fiche_dhcp.pdf" target=_blank>DHCP</a></h1>
+				<h3>Le "Dynamic Host Configuration Protocol" est un terme anglais désignant un protocole réseau dont le rôle est d'assurer la configuration automatique des paramètres IP d'une station, notamment en lui assignant automatiquement une adresse IP et un masque de sous­réseau. Par opposition, l'assignation manuelle d'une adresse IP sera nommée adresse IP statique ou adresse IP fixe.		
+				</h3>
+				<br>
+				<h1><a href="fichiers/glossaire/fiche_dns.pdf" target=_blank>DNS</a></h1>
+				<h3>Le "Domain Name System ou système de noms de domaine" est un système permettant d'établir une correspondance entre une adresse IP et un nom de domaine et, plus généralement, de trouver une information à partir d'un nom de domaine.
+				</h3>
+				<br>
+				<h1>HUB ou concentrateur
+				</h1>
+				<h3>Un concentrateur (hub) est le noeud central d'un réseau informatique. Il s'agit d'un dispositif électronique permettant de créer un réseau informatique local de type Ethernet.
+					Cet appareil permet la connexion de plusieurs équipements sur une même ligne de communication, en régénérant le signal, et en répercutant les données émises par l'un vers tous les autres.
+				</h3>
+				<br>
+				<h1>Switch ou commutateur
+				</h1>
+				<h3>Un commutateur réseau (switch) est un équipement qui relie plusieurs segments (câbles ou fibres) dans un réseau informatique. Il s'agit le plus souvent d'un boîtier disposant de plusieurs ports Ethernet. Il a donc la même apparence qu'un concentrateur (hub).
+					Contrairement à un concentrateur (hub), un commutateur ne se contente pas de reproduire sur tous les ports chaque trame qu'il reçoit. Il sait déterminer sur quel port il doit envoyer une trame, en fonction de l'adresse à laquelle cette trame est destinée. Les commutateurs sont souvent utilisés pour remplacer des concentrateurs.
+					Contrairement à un routeur, un commutateur (switch) ne s'occupe pas du protocole IP. Il utilise seulement les adresses MAC et non les adresses IP pour diriger les données.
+				</h3>
+				<br>
+				<h1>Wide Area Network
+				</h1>
+				<h3> Un réseau étendu (WAN pour Wide Area Network) est un réseau informatique couvrant une grande zone géographique, typiquement à l'échelle d'un pays, d'un continent, voire de la planète entière. Le plus grand WAN est le réseau Internet. Parfois, on parle aussi de réseaux publics par opposition aux réseaux privés que sont les LAN.
+					Internet est le réseau informatique mondial qui rend accessibles au public des services (comme le courrier électronique et le World Wide Web). Ses utilisateurs sont désignés par le néologisme « internaute ». Techniquement, Internet se définit comme le réseau public mondial utilisant le protocole de communication « TCP/IP » (au sens les protocoles de la famille TCP/IP).
+					L'accès à Internet peut être réalisé auprès d'un fournisseur d'accès (FAI pour Fournisseur d'Accès Internet ou ISP pour Internet Service Provider) via divers moyens de télécommunication : soit filaire (réseau téléphonique à bas débit ADSL ou xDSL, câble coaxial, fibre optique, courant électrique porteur CPL), soit sans fil (Wi­Fi, Wimax, Internet par satellite, 3G...).
+				</h3>
+				<br>
+				<h1>
+				</h1>
+				<h3>
+				</h3>
+			
+			</article>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+</body>
+</html>

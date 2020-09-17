@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+		<title>Lycée Charlie Chaplin - Informatique et Sciences du numérique</title>
+		<meta name="description" content="Script jQuery " />
+		<meta name="Robots" content="noindex, nofollow, nosnippet"/>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<a href="index.html" class="gn-icon gn-icon-menu"><span>Menu</span></a>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">
+								<li> <a href="index.html" class="gn-icon">Accueil</a> </li>
+								<li class="gn-search-item">
+									<a href="TCP-IP.html" class="gn-icon gn-icon-download">Le modèle TCP/IP (OSI)</a>
+									<ul class="gn-submenu">
+										<li><a href="fichiers/doc_ressource.pdf" target=_blank class="gn-icon gn-icon-article">Documents de cours</a></li>
+										
+										<li><a href="fichiers/TP_cisco/calcul_IP.pdf" target=_blank class="gn-icon gn-icon-cog">Exercice</a></li>
+									</ul>
+								</li>
+								<li class="gn-search-item">
+									<a href="filius.html" class="gn-icon gn-icon-download">Simulation d'un réseau</a>
+									<ul class="gn-submenu">
+										<li><a href="fichiers/Filius/Simulation_Filius.pdf" target=_blank class="gn-icon gn-icon-article">Fiche de l'activité</a></li>
+										<li><a href="fichiers/Filius/filius-1.7.2_portable.zip" target=_blank class="gn-icon gn-icon-cog">Téléchargement du logiciel</a></li>
+										<li><a href="fichiers/Filius/activite4_ressources.fls" target=_blank class="gn-icon gn-icon-cog">Fichier ressource Activité 4</a></li>
+									</ul>
+								</li >
+								<li class="gn-search-item">
+									<a class="gn-icon gn-icon-download">Réseaux et Python</a>
+									
+								</li >
+								<li class="gn-search-item">
+									<a href="glossaire.html" class="gn-icon gn-icon-archive">Glossaire</a>
+							
+								</li >
+							</ul>
+						</div>
+					</nav>
+				</li>
+				<li><a href="http://www.lyceecharliechaplin.com" target=_blank>Lycée Charlie Chaplin - ISN</a></li>
+			</ul>
+			<header>
+				<h1>III. Réseau et Python</h1>
+				<img class=img_flotte src="img/markus-spiske-207946.jpg" align="right" width="600" height="auto">
+				<p></p>
+			</header>
+				<article>
+					<h1> Le concept<span>En Python pour faire communiquer deux programmes sur le réseau, il faut définir des canaux de communication appelés <em>sockets</em>. </span></h1>
+					<hr>
+					</h3>
+					<br>
+					<br>
+					<br>
+					
+					<p><h3> Voici un article clair qui dévoile les principes de la gestion de réseau local dans Python. Pratique pour implémenter un chat dans une application ou un jeu.</h3></p>
+					
+					<a href="https://www.supinfo.com/articles/single/1232-reseau-python" target=blank> <img class=img_centre src="img/logo_SUPINFO.png" alt="logo Supinfo" align = "center"/></a>
+			
+				<br>
+				<h1> En pratique</h1>
+				<br>
+				<h3>En fait, une machine et son OS est un réseau local. Il existe une adresse IP qui lui est réservé : 127.0.0.1 ou 'localhost' (cf. <a href="glossaire.html" target=_self">glossaire</a>)
+				Les scripts suivants sont écrits pour permettre leur exécution sur la même machine.
+				</h3>
+				<br>
+				<h3><strong>NOTA : </strong> Pour exécuter ces deux scripts, il faut les exécuter à partir du <em>shell Python</em>. Par contre, il est nécessaire de lancer deux instances du shell, une pour le serveur et une pour le client.
+				</h3>
+				<br>
+				<hr>
+				<hr>
+				<h3> Un script minimal de serveur</h3>
+				<pre> <code>
+#coding:utf-8
+import socket
+
+hote = ''
+port = 5566
+
+
+mon_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #on créé le socket avec les protocoles classiques
+
+mon_socket1.bind((hote,port))     					#lie le socket à un port et une adresse				
+
+print("Le serveur est démarré...")
+
+while True:
+	mon_socket1.listen(5)     						#on définit le nombre de tentatives de connexion avant que le serveur refuse d'autres connexions
+	connexion, adresse = mon_socket1.accept()
+	print("Un client connecté...")
+
+	msg_client = connexion.recv(1024)   			#on reçoit en spécifiant la taille du buffer (multiple de 2)
+	msg_client = msg_client.decode("utf8")
+	print(msg_client)
+
+
+connexion.close()   								#on ferme la connexion avant...
+mon_socket1.close()      							#de fermer le socket
+				</code></pre>
+				<br>
+				<hr>
+				<img src ="img/telechargement.png" height=30px width=auto/><a href="fichiers/reseau_et_python/serveur_simple.py" target=_blank>     serveur_simple.py</a>
+				<hr>
+				<hr>
+				<br>
+				<h3> Un script simple de client</h3>
+				<pre> <code>
+#coding:utf-8
+import socket
+
+hote = 'localhost'   #serveur local ou 127.0.0.1 si on travaille sur la même machine
+port = 5566   # même port que le serveur
+
+mon_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #on créé le socket avec les protocoles classiques comme pour le serveur
+
+try:   
+    mon_socket.connect((hote,port))
+    msg_client = "salut serveur!"
+    msg_client = msg_client.encode("utf8")
+    mon_socket.sendall(msg_client)   #le client envoie les données vers le serveur sur le port spécifié
+    
+except :
+    print("connexion au serveur échouée")
+
+finally :
+    mon_socket.close()
+				</code></pre>
+				<br>
+				<hr>
+				<img src ="img/telechargement.png" height=30px width=auto/><a href="fichiers/reseau_et_python/client_simple.py" target=_blank>     client_simple.py</a>
+				<hr>
+				<hr>
+				<br>
+				
+				</article>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+</body>
+</html>
