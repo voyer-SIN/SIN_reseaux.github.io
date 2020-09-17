@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
-		<title>Lycée Charlie Chaplin - Informatique et Sciences du numérique</title>
+		<title>Lycée Aragon Picasso - SIN</title>
 		<meta name="description" content="Script jQuery " />
 		<meta name="Robots" content="noindex, nofollow, nosnippet"/>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
@@ -23,7 +23,7 @@
 									<a href="TCP-IP.html" class="gn-icon gn-icon-download">Le modèle TCP/IP (OSI)</a>
 									<ul class="gn-submenu">
 										<li><a href="fichiers/doc_ressource.pdf" target=_blank class="gn-icon gn-icon-article">Documents de cours</a></li>
-										
+
 										<li><a href="fichiers/TP_cisco/calcul_IP.pdf" target=_blank class="gn-icon gn-icon-cog">Exercice</a></li>
 									</ul>
 								</li>
@@ -37,11 +37,11 @@
 								</li >
 								<li class="gn-search-item">
 									<a class="gn-icon gn-icon-download">Réseaux et Python</a>
-									
+
 								</li >
 								<li class="gn-search-item">
 									<a href="glossaire.html" class="gn-icon gn-icon-archive">Glossaire</a>
-							
+
 								</li >
 							</ul>
 						</div>
@@ -61,11 +61,11 @@
 					<br>
 					<br>
 					<br>
-					
+
 					<p><h3> Voici un article clair qui dévoile les principes de la gestion de réseau local dans Python. Pratique pour implémenter un chat dans une application ou un jeu.</h3></p>
-					
+
 					<a href="https://www.supinfo.com/articles/single/1232-reseau-python" target=blank> <img class=img_centre src="img/logo_SUPINFO.png" alt="logo Supinfo" align = "center"/></a>
-			
+
 				<br>
 				<h1> En pratique</h1>
 				<br>
@@ -89,7 +89,7 @@ port = 5566
 
 mon_socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #on créé le socket avec les protocoles classiques
 
-mon_socket1.bind((hote,port))     					#lie le socket à un port et une adresse				
+mon_socket1.bind((hote,port))     					#lie le socket à un port et une adresse
 
 print("Le serveur est démarré...")
 
@@ -122,12 +122,12 @@ port = 5566   # même port que le serveur
 
 mon_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) #on créé le socket avec les protocoles classiques comme pour le serveur
 
-try:   
+try:
     mon_socket.connect((hote,port))
     msg_client = "salut serveur!"
     msg_client = msg_client.encode("utf8")
     mon_socket.sendall(msg_client)   #le client envoie les données vers le serveur sur le port spécifié
-    
+
 except :
     print("connexion au serveur échouée")
 
@@ -140,7 +140,7 @@ finally :
 				<hr>
 				<hr>
 				<br>
-				
+
 				</article>
 		</div><!-- /container -->
 		<script src="js/classie.js"></script>
