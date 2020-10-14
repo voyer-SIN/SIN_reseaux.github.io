@@ -73,7 +73,7 @@
 			<header>
 				<h1><strong>Fiche d'exercices</strong> <span>Architecture des réseaux IP</span></h1>
 			<hr>
-				<h2>Bien lire et comprendre les pages 7 à 11 du <a href="fichiers/doc_ressource.pdf" target=_blank">Documents de cours</a></h2>
+				<h2>Bien lire et comprendre les pages 7 à 11 du <a href="fichiers/doc_ressource.pdf" target="_blank">Documents de cours</a></h2>
 			<hr>
 			</header>
 			<hr>
@@ -124,69 +124,53 @@
 			<hr>
 			        <h1><strong>Exercice 2 :</strong> Réseau d'une TPE</h1>
 
-<img class="img_flotte" src="img/reseau_compta.png" alt="Réseau compta"/>
-
-
-<p>Vous travaillez dans le cabinet comptable S.A Compta. Tous les ordinateurs du cabinet sont en
-réseau comme sur l’illustration. Nous sommes en présence d’un réseau utilisant le
-protocole TCP/IP. Les adresses IP de chaque nœud du réseau sont listés dans le tableau suivant. Pour tous, le
-masque par défaut est 255.255.255.0.</p>
-
-
-<table class="description">
-	<caption>Adressage IP du réseau</caption>
-	<tr><th>PC1</th>
-		<td><code>192.168.10.6</code></td></tr>
-	<tr><th>PC2</th>
-		<td><code>192.168.10.7</code></td></tr>
-    <tr><th>PC3</th>
-		<td><code>192.168.10.8</code></td></tr>
-    <tr><th>PC4</th>
-		<td><code>192.168.10.9</code></td></tr>
-    <tr><th>Serveur 1</th>
-		<td><code>192.168.10.100</code></td></tr>
-    <tr><th>Serveur 2</th>
-		<td><code>192.168.10.200</code></td></tr>
-</table>
-
-<h2>Question 1</h2>
-
-<p>Quelle est l’architecture de ce réseau ?</p>
-
-<h2>Question 2</h2>
-
-<p>Indiquer quelle est l’adresse IP du réseau ?</p>
-
-<h2>Question 3</h2>
-
-<p>Déterminer le nombre de machines qu’on peut brancher dans ce réseau.</p>
-
-<h2>Question 4</h2>
-
-<p>Quelle est l’adresse de diffusion de ce réseau ?</p>
-
-<h2>Question 5</h2>
-
-<p>Quels sont les différents sous-réseaux obtenus si le 4 ème octet du nouveau masque est : 11000000
-Dans ce cas les machines pourront-elles encore communiquer ? Expliquer.
-Comment peut-on y remédier ?</p>
-
+			<img class="img_flotte" src="img/reseau_compta.png" alt="Réseau compta"/>
+			<p>Vous travaillez dans le cabinet comptable S.A Compte. Tous les ordinateurs du cabinet sont en
+				réseau comme sur l’illustration. Nous sommes en présence d’un réseau utilisant le
+				protocole TCP/IP. Les adresses IP de chaque nœud du réseau sont listés dans le tableau suivant. Pour tous, le
+				masque par défaut est 255.255.255.0.</p>
+			<table class="description">
+				<caption>Adressage IP du réseau</caption>
+				<tr><th>PC1</th>
+					<td><code>192.168.10.6</code></td></tr>
+				<tr><th>PC2</th>
+					<td><code>192.168.10.7</code></td></tr>
+			    <tr><th>PC3</th>
+					<td><code>192.168.10.8</code></td></tr>
+			    <tr><th>PC4</th>
+					<td><code>192.168.10.9</code></td></tr>
+			    <tr><th>Serveur 1</th>
+					<td><code>192.168.10.100</code></td></tr>
+			    <tr><th>Serveur 2</th>
+					<td><code>192.168.10.200</code></td></tr>
+			</table>
+			<h2>Question 1</h2>
+			<p>Quelle est l’architecture de ce réseau ?</p>
+			<h2>Question 2</h2>
+			<p>Indiquer quelle est l’adresse IP du réseau.</p>
+			<h2>Question 3</h2>
+			<p>Déterminer le nombre de machines qu’on peut brancher dans ce réseau.</p>
+			<h2>Question 4</h2>
+			<p>Quelle est l’adresse de diffusion de ce réseau ?</p>
+			<h2>Question 5</h2>
+			<p>Quels sont les différents sous-réseaux obtenus si le 4 ème octet du nouveau masque est : 11000000
+				Dans ce cas les machines pourront-elles encore communiquer ? Expliquer.
+				Comment peut-on y remédier ?</p>
         <!-- ******************* Début de la Boîte à onglets ******************** -->
-<div class="boite_onglets">
-	<ul class="onglets">
-		<li class="onglet">Correction rapide...</li>
-    </ul>
-	<div class="zone_boite">
-
-        <div class="contenu">
-       <p>
-<ul class="liste_num">
-    <li>Il s'agit d'un réseau en étoile</li>
-    <li>L’adresse IP du réseau est : 192.168.10.0</li>
-    <li>Ce réseau peut contenir 2<sup>8</sup>-2 =254 hôtes</li>
-    <li>L’adresse de diffusion de ce réseau est : 192.168.10.255</li>
-    <li>Les sous-réseaux sont les suivants :
-    <ul classe="liste_enum">
+				<div class="boite_onglets">
+						<ul class="onglets">
+							<li class="onglet">Correction rapide...</li>
+    				</ul>
+				<div class="zone_boite">
+						<div class="contenu">
+       				<p>
+								<ul class="liste_num">
+								    <li>Il s'agit d'un réseau en étoile</li>
+								    <li>L’adresse IP du réseau est : 192.168.10.0</li>
+								    <li>Ce réseau peut contenir 2<sup>8</sup>-2 =254 hôtes</li>
+								    <li>L’adresse de diffusion de ce réseau est : 192.168.10.255</li>
+								    <li>Les sous-réseaux sont les suivants :
+								<ul classe="liste_enum">
 <li>- 192.168.10.0 /26</li>
 <li>- 192.168.10.64 /26</li>
 <li>- 192.168.10.128 /26</li>
@@ -265,10 +249,6 @@ sachant qu’elles ont toutes le masque 255.255.255.224 :</p>
 
 <p>Combien peut-on faire de sous-réseau avec ce masque 255.255.255.224 dans le réseau
 de classe C 192.168.101.0 ?</p>
-
-
-
-
 
         <!-- ******************* Début de la Boîte à onglets ******************** -->
 <div class="boite_onglets">
