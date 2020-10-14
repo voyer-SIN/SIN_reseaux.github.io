@@ -16,13 +16,13 @@
 			new gnMenu( document.getElementById( 'gn-menu' ) );
 		</script>
 		<script src="scripts/jquery-iframe-auto-height-master/vendor/jquery.browser.js"></script>
-    	<script src="scripts/jquery-iframe-auto-height-master/dist/jquery-iframe-auto-height.js"></script>
+    <script src="scripts/jquery-iframe-auto-height-master/dist/jquery-iframe-auto-height.js"></script>
 		<script src="scripts/boite_onglet.js"></script>
 		<script src="scripts/accordeon.js"></script>
 		<script src="scripts/prog_html.js"></script>
 
 		<script src="codemirror/lib/codemirror.js" type="text/javascript"></script>
-    	<script src="codemirror/mode/python/python.js" type="text/javascript"></script>
+  	<script src="codemirror/mode/python/python.js" type="text/javascript"></script>
 		<script src="codemirror/mode/xml/xml.js"></script>
 		<script src="codemirror/mode/javascript/javascript.js"></script>
 		<script src="codemirror/mode/css/css.js"></script>
@@ -87,7 +87,7 @@
 				<ul class="onglets">
 					<li class="onglet">Une piste...</li>
 					<li class="onglet">Une correction...</li>
-    			</ul>
+  			</ul>
 			<div class="zone_boite">
 			<div class="contenu">
 			/29 est la notation CIDR d'un masque de sous-réseau.
@@ -106,24 +106,24 @@
             <p>Combien de machines peut-on mettre dans ce sous-réseau ?</p>
 <!-- ******************* Début de la Boîte à onglets ******************** -->
 			<div class="boite_onglets">
-			<ul class="onglets">
-				<li class="onglet">Une piste...</li>
-				<li class="onglet">Une correction...</li>
-			</ul>
-			<div class="zone_boite">
-				<div class="contenu">
-					Pour un mot binaire de n bits, nous avons 2<sup>n</sup> combinaisons possibles.
-				</div><!-- fin contenu -->
-				<div class="contenu">
-		Nous avons vu qu'il restait 3 bits pour la partie hôte, nous avons donc la possibilité de brancher 2<sup>3</sup> hôtes (machines) sur ce réseau.<br>
-					<strong>Attention</strong> toutefois car il ne faudra pas attribuer l'adresse réseau et l'adresse de broadcast.        </div><!-- fin contenu -->
+				<ul class="onglets">
+					<li class="onglet">Une piste...</li>
+					<li class="onglet">Une correction...</li>
+				</ul>
+				<div class="zone_boite">
+					<div class="contenu"><p>Pour un mot binaire de n bits, nous avons 2<sup>n</sup> combinaisons possibles.</p>
+					</div><!-- fin contenu -->
+					<div class="contenu"><p>Nous avons vu qu'il restait 3 bits pour la partie hôte, nous avons donc la possibilité de brancher 2<sup>3</sup> hôtes (machines) sur ce réseau.<br>
+					<strong>Attention</strong> toutefois car il ne faudra pas attribuer l'adresse réseau et l'adresse de broadcast.</p>
+					</div><!-- fin contenu -->
 
-			</div><!-- fin zone_boite -->
+				</div><!-- fin zone_boite -->
 			</div><!-- fin boite_onglets -->
+			</article>
 			<hr>
 			<hr>
-			        <h1><strong>Exercice 2 :</strong> Réseau d'une TPE</h1>
-
+			<article>
+      <h1><strong>Exercice 2 :</strong> Réseau d'une TPE</h1>
 			<img class="img_flotte" src="img/reseau_compta.png" alt="Réseau compta"/>
 			<p>Vous travaillez dans le cabinet comptable S.A Compte. Tous les ordinateurs du cabinet sont en
 				réseau comme sur l’illustration. Nous sommes en présence d’un réseau utilisant le
@@ -170,280 +170,252 @@
 								    <li>Ce réseau peut contenir 2<sup>8</sup>-2 =254 hôtes</li>
 								    <li>L’adresse de diffusion de ce réseau est : 192.168.10.255</li>
 								    <li>Les sous-réseaux sont les suivants :
-								<ul classe="liste_enum">
-<li>- 192.168.10.0 /26</li>
-<li>- 192.168.10.64 /26</li>
-<li>- 192.168.10.128 /26</li>
-<li>- 192.168.10.192 /26</li>
-</ul>
-</li>
-    </ul>
-</p>
+												<ul classe="liste_enum">
+													<li>- 192.168.10.0 /26</li>
+													<li>- 192.168.10.64 /26</li>
+													<li>- 192.168.10.128 /26</li>
+													<li>- 192.168.10.192 /26</li>
+												</ul>
+										</li>
+    					</ul>
+						</p>
         </div><!-- fin contenu -->
 
 	</div><!-- fin zone_boite -->
 </div><!-- fin boite_onglets -->
 <!-- ******************** Fin de la Boîte à onglets ********************* -->
-
-		<hr>
-		<hr>
+				</article>
+				<hr>
+				<hr>
+				<article>
         <h1><strong>Exercice 3 : </strong>Sous-réseaux</h1>
+				<h2>Problématique:</h2>
+
+				<p>Si on souhaite créer un réseau de 1 millions de machines par exemple, il faut utiliser un réseau
+				de classe A. Or, dans ce cas, on perd 15,7 millions d’adresses qui ne seront plus disponibles pour
+				le reste du monde. Ce gaspillage qui a été fait au début d’Internet n’est plus tolérable depuis de
+				nombreuses années, la totalité des adresses disponibles ayant été distribuées. Pour les
+				économiser, on a défini la notion de sous-réseaux (SUBNET).</p>
 
 
-<h2>Problématique:</h2>
+				<p>Dans ce cas, la dernière valeur non nulle du masque peut prendre une valeur autre que 255 ou
+				0 pour définir ce sous-réseau : Ce sera un nombre décimal correspondant à un nombre binaire
+				composé de 1 contigus en poids fort (1000 0000 ou 1100 0000 ou 1110 000 ou 1111 0000 ou 1111
+				1000 ou 1111 1100) soit en décimal (128 ou 192 ou 224 ou 240 ou 248 ou 252 ).</p>
 
-<p>Si on souhaite créer un réseau de 1 millions de machines par exemple, il faut utiliser un réseau
-de classe A. Or, dans ce cas, on perd 15,7 millions d’adresses qui ne seront plus disponibles pour
-le reste du monde. Ce gaspillage qui a été fait au début d’Internet n’est plus tolérable depuis de
-nombreuses années, la totalité des adresses disponibles ayant été distribuées. Pour les
-économiser, on a défini la notion de sous-réseaux (SUBNET).</p>
+				<p>Ainsi on utilise des masques de sous-réseau tels que :</p>
 
+				<ul>
+					<li>255.255.224.0 → définit un sous-réseau d’un réseau de classe B</li>
+					<li>255.240.0.0 → définit un sous-réseau d’un réseau de classe A</li>
+					<li>255.255.255.192 → définit un sous-réseau d’un réseau de classe C</li>
+				</ul>
 
-<p>Dans ce cas, la dernière valeur non nulle du masque peut prendre une valeur autre que 255 ou
-0 pour définir ce sous-réseau : Ce sera un nombre décimal correspondant à un nombre binaire
-composé de 1 contigus en poids fort (1000 0000 ou 1100 0000 ou 1110 000 ou 1111 0000 ou 1111
-1000 ou 1111 1100) soit en décimal (128 ou 192 ou 224 ou 240 ou 248 ou 252 ).</p>
+				<p>Soit l'appareil connecté ayant les caractéristiques réseaux suivantes :</p>
+				<ul>
+					<li>Adresse IP : 192.168.101.100</li>
+					<li>Masque : 255.255.255.224</li>
+					<li>Adresse Réseau : 192.168.101.96 </li>
+				</ul>
 
-<p>Ainsi on utilise des masques de sous-réseau tels que :</p>
+				<h2>Question 1</h2>
 
-<ul>
-<li>255.255.224.0 → définit un sous-réseau d’un réseau de classe B</li>
-<li>255.240.0.0 → définit un sous-réseau d’un réseau de classe A</li>
-<li>255.255.255.192 → définit un sous-réseau d’un réseau de classe C</li>
-</ul>
+				<p>Vérifier que l'adresse réseau de cet appareil vaut bien 192.168.101.96</p>
 
-Soit l'appareil connecté ayant les caractéristiques réseaux suivantes :
-<ul>
-<li>Adresse IP : 192.168.101.100</li>
-<li>Masque : 255.255.255.224</li>
-<li>Adresse Réseau : 192.168.101.96 </li>
-</ul>
+				<h2>Question 2</h2>
 
-<h2>Question 1</h2>
-
-<p>Vérifier que l'adresse réseau de cet appareil vaut bien 192.168.101.96</p>
-
-<h2>Question 2</h2>
-
-<p>A l'aide du masque, identifier le NetID et le HostID de l'exemple et déduire le nombre
-d'adresses hôtes disponibles.</p>
+				<p>A l'aide du masque, identifier le NetID et le HostID de l'exemple et déduire le nombre
+					d'adresses hôtes disponibles.</p>
 
 
-<h2>Question 3</h2>
+				<h2>Question 3</h2>
 
-<p>Écrire les adresses minimum et maximum associées à ce subnet, et déduire la plage
-d'adresses disponibles pour les hôtes.</p>
+				<p>Écrire les adresses minimum et maximum associées à ce subnet, et déduire la plage
+				d'adresses disponibles pour les hôtes.</p>
 
-<h2>Question 4</h2>
+				<h2>Question 4</h2>
 
-<p>Dans la liste ci-dessous, cochez les machines qui appartiennent à ce sous-réseau,
-sachant qu’elles ont toutes le masque 255.255.255.224 :</p>
-<ul>
-<li>192.168.100.102</li>
-<li>192.168.101.120</li>
-<li>192.168.101.92</li>
-<li>192.168.101.100</li>
-</ul>
-
-<h2>Question 5</h2><h3>un peu plus difficile...</h3>
-
-<p>Combien peut-on faire de sous-réseau avec ce masque 255.255.255.224 dans le réseau
-de classe C 192.168.101.0 ?</p>
+				<p>Dans la liste ci-dessous, cochez les machines qui appartiennent à ce sous-réseau,
+				sachant qu’elles ont toutes le masque 255.255.255.224 :</p>
+				<ul>
+						<li>192.168.100.102</li>
+						<li>192.168.101.120</li>
+						<li>192.168.101.92</li>
+						<li>192.168.101.100</li>
+				</ul>
+				<h2>Question 5</h2><h3>un peu plus difficile...</h3>
+				<article>
+				<p>Combien peut-on faire de sous-réseau avec ce masque 255.255.255.224 dans le réseau
+				de classe C 192.168.101.0 ?</p>
 
         <!-- ******************* Début de la Boîte à onglets ******************** -->
-<div class="boite_onglets">
-	<ul class="onglets">
-		<li class="onglet">Réponse Q1</li>
-		<li class="onglet">Réponse Q2</li>
-        <li class="onglet">Réponse Q3</li>
-        <li class="onglet">Réponse Q4</li>
-        <li class="onglet">Réponse Q5</li>
-    </ul>
-	<div class="zone_boite">
-		<div class="contenu">
-            N'importe quel mot binaire associé, avec un ET logique, à un masque en 255 vaut le mot binaire.
-            <br>
-            Donc, <code>(100)</code><sub>10</sub> <strong>ET</strong> <code>(255)</code><sub>10</sub> = <code>(100)</code><sub>10</sub>.
-            <br><br>
-<code>(100)<sub>10</sub></code> = <code>(01100100)</code><sub>2</sub>, donc  <code>(01100100)</code><sub>2</sub>.<code>(11100000)</code><sub>2</sub>=<code>(01100000)</code><sub>2</sub>, soit <code>(96)</code><sub>10</sub>
-<br>
-L'adresse réseau est donc bien <code>192.168.101.96</code>
-        </div><!-- fin contenu -->
-		<div class="contenu">
-            Le masque vaut <code>11111111.11111111.11111111.11100000</code>
-            <br>
-            La séparation entre le Net-ID et le Host-ID se fait donc entre le 27ème et le 28ème bit. 5 bits sont donc
-            disponibles pour les hosts (machines), ce qui représent 2<sup>5</sup> -2 hosts, soit 30 (on exclut
-            l'adresse réseau et l'adresse de diffusion).
-        </div><!-- fin contenu -->
-        <div class="contenu">
-L'adresse IP mini correspond à l'adresse réseau et donc aux 5 derniers bits à 0 : <code>(11000000.10101000.01100101.01100000)<sub>2</sub></code> = <code>(192.168.101.96)</code><sub>10</sub>
-<br>
-L'adresse IP maxi reprend le début de l'adresse réseau avec les 5 derniers bits à 1 : <code>(11000000.10101000.01100101.01111111)<sub>2</sub></code> = <code>(192.168.101.127)</code><sub>10</sub>
-<br>
-La plage d'adresses est donc de <code>(192.168.101.96)</code><sub>10</sub> à <code>(192.168.101.127)</code><sub>10</sub>.
-<br><br>
-A noter que la dernière adresse est l'adresse de broadcast du réseau : <code>(192.168.101.127)</code><sub>10</sub>.
+				<div class="boite_onglets">
+					<ul class="onglets">
+						<li class="onglet">Réponse Q1</li>
+						<li class="onglet">Réponse Q2</li>
+				        <li class="onglet">Réponse Q3</li>
+				        <li class="onglet">Réponse Q4</li>
+				        <li class="onglet">Réponse Q5</li>
+				    </ul>
+				<div class="zone_boite">
+					<div class="contenu">
+			            N'importe quel mot binaire associé, avec un ET logique, à un masque en 255 vaut le mot binaire.
+			            <br>
+			            Donc, <code>(100)</code><sub>10</sub> <strong>ET</strong> <code>(255)</code><sub>10</sub> = <code>(100)</code><sub>10</sub>.
+			            <br><br/>
+									<code>(100)<sub>10</sub></code> = <code>(01100100)</code><sub>2</sub>, donc  <code>(01100100)</code><sub>2</sub>.<code>(11100000)</code><sub>2</sub>=<code>(01100000)</code><sub>2</sub>, soit <code>(96)</code><sub>10</sub>
+									<br>
+									<p>L'adresse réseau est donc bien <code>192.168.101.96</code></p>
+					</div><!-- fin contenu -->
+					<div class="contenu">
+	            Le masque vaut <code>11111111.11111111.11111111.11100000</code>
+	            <br>
+	            La séparation entre le Net-ID et le Host-ID se fait donc entre le 27ème et le 28ème bit. 5 bits sont donc
+	            disponibles pour les hosts (machines), ce qui représent 2<sup>5</sup> -2 hosts, soit 30 (on exclut
+	            l'adresse réseau et l'adresse de diffusion).
+	        </div><!-- fin contenu -->
+        	<div class="contenu">
+							<p>L'adresse IP mini correspond à l'adresse réseau et donc aux 5 derniers bits à 0 : <code>(11000000.10101000.01100101.01100000)<sub>2</sub></code> = <code>(192.168.101.96)</code><sub>10</sub></p>
+							<br>
+							<p>L'adresse IP maxi reprend le début de l'adresse réseau avec les 5 derniers bits à 1 : <code>(11000000.10101000.01100101.01111111)<sub>2</sub></code> = <code>(192.168.101.127)</code><sub>10</sub>
+							<br>
+							<p>La plage d'adresses est donc de <code>(192.168.101.96)</code><sub>10</sub> à <code>(192.168.101.127)</code><sub>10</sub>.</p>
+							<br>
+							<p>A noter que la dernière adresse est l'adresse de broadcast du réseau : <code>(192.168.101.127)</code><sub>10</sub>.</p>
+					</div><!-- fin contenu -->
+        	<div class="contenu">
+            	<p>Facile !</p>
+        	</div><!-- fin contenu -->
+        	<div class="contenu">
+            	<p><strong>Plus dur !</strong></p><br>
+            	<p>Le masque 255.255.255.224 permet 2<sup>5</sup> hôtes (5 bits pour les machines). Un réseau de classe C permet d'avoir 2<sup>8</sup> hôtes. On peut donc avoir 2<sup>8</sup> / 2<sup>5</sup> = 8 sous-réseaux avec ce masque 255.255.255.224.</p>
+        	</div><!-- fin contenu -->
 
-        </div><!-- fin contenu -->
-        <div class="contenu">
-            Facile !
-        </div><!-- fin contenu -->
-        <div class="contenu">
-            Plus dur !<br>
-            Le masque 255.255.255.224 permet 2<sup>5</sup> hôtes (5 bits pour les machines). Un réseau de classe C permet d'avoir 2<sup>8</sup> hôtes. On peut donc avoir 2<sup>8</sup> / 2<sup>5</sup> = 8 sous-réseaux avec ce masque 255.255.255.224.
-        </div><!-- fin contenu -->
-
-	</div><!-- fin zone_boite -->
-</div><!-- fin boite_onglets -->
-		<hr>
-		<hr>
+				</div><!-- fin zone_boite -->
+				</div><!-- fin boite_onglets -->
+				</article>
+				<hr>
+				<hr>
             <h1><strong>Exercice 4 :</strong> Sous-réseaux dans un gros lycée</h1>
-		<article>
-            <p>L'adresse IP d'une machine du LPO Chaplin avec son masque est la suivante :
-                <code>172.16.15.100/21</code>
+				<article>
+        <p>L'adresse IP d'une machine du LPO Aragon avec son masque est la suivante :
+        <code>172.18.15.100/21</code></p>
 
-            </p>
-
-            <h2>Question 1</h2>
-            <p>Donner en binaire, puis en décimal, le masque de sous-réseau</p>
-
-        <!-- ******************* Début de la Boîte à onglets ******************** -->
-<div class="boite_onglets">
-	<ul class="onglets">
-		<li class="onglet">Une piste...</li>
-		<li class="onglet">Une correction...</li>
-    </ul>
-	<div class="zone_boite">
-		<div class="contenu">
-			/21 est la notation CIDR.
-		</div><!-- fin contenu -->
-		<div class="contenu">
-Masque en binaire (21 bits à 1 en continu) : 11111111 . 11111111 . 11111000 . 00000000<br>
-Traduction décimale : 255.255.248.0
-        </div><!-- fin contenu -->
-
-	</div><!-- fin zone_boite -->
-</div><!-- fin boite_onglets -->
+        <h2>Question 1</h2>
+        <p>Donner en binaire, puis en décimal, le masque de sous-réseau</p>
+<!-- ******************* Début de la Boîte à onglets ******************** -->
+				<div class="boite_onglets">
+					<ul class="onglets">
+						<li class="onglet">Une piste...</li>
+						<li class="onglet">Une correction...</li>
+    			</ul>
+					<div class="zone_boite">
+						<div class="contenu">
+							<p>/21 est la notation CIDR.</p>
+						</div><!-- fin contenu -->
+						<div class="contenu">
+								<p>Masque en binaire (21 bits à 1 en continu) : 11111111 . 11111111 . 11111000 . 00000000</p><br>
+								<p>Traduction décimale : 255.255.248.0</p>
+        		</div><!-- fin contenu -->
+					</div><!-- fin zone_boite -->
+				</div><!-- fin boite_onglets -->
 <!-- ******************** Fin de la Boîte à onglets ********************* -->
 
-
-
-            <h2>Question 2</h2>
-            <p>Quelle est l’adresse du réseau sur lequel se trouve cette machine ?</p>
-
+        <h2>Question 2</h2>
+        <p>Quelle est l’adresse du réseau sur lequel se trouve cette machine ?</p>
         <!-- ******************* Début de la Boîte à onglets ******************** -->
-<div class="boite_onglets">
-	<ul class="onglets">
-		<li class="onglet">Une piste...</li>
-		<li class="onglet">Une correction...</li>
-    </ul>
-	<div class="zone_boite">
-		<div class="contenu">
-			Pour calculer une adresse réseau, on utilise l'opérateur binaire ET : Ip ET Masque
-		</div><!-- fin contenu -->
-		<div class="contenu">
-L'adresse de réseau est donc 172.16.8.0
-        </div><!-- fin contenu -->
-
-	</div><!-- fin zone_boite -->
-</div><!-- fin boite_onglets -->
+				<div class="boite_onglets">
+						<ul class="onglets">
+							<li class="onglet">Une piste...</li>
+							<li class="onglet">Une correction...</li>
+				    </ul>
+						<div class="zone_boite">
+							<div class="contenu">
+								<p>Pour calculer une adresse réseau, on utilise l'opérateur binaire ET : Ip ET Masque</p>
+							</div><!-- fin contenu -->
+							<div class="contenu">
+								<p>L'adresse de réseau est donc 172.18.8.0</p>
+        			</div><!-- fin contenu -->
+						</div><!-- fin zone_boite -->
+				</div><!-- fin boite_onglets -->
 <!-- ******************** Fin de la Boîte à onglets ********************* -->
 
-
-
-            <h2>Question 3</h2>
-            <p>Combien peut-on avoir de machines (hôtes) sur ce réseau ?</p>
-
+        <h2>Question 3</h2>
+        <p>Combien peut-on avoir de machines (hôtes) sur ce réseau ?</p>
         <!-- ******************* Début de la Boîte à onglets ******************** -->
-<div class="boite_onglets">
-	<ul class="onglets">
-		<li class="onglet">Une piste...</li>
-		<li class="onglet">Une correction...</li>
-    </ul>
-	<div class="zone_boite">
-		<div class="contenu">
-On regarde combien de bits étaient attribués à la partie host du masque...
-		</div><!-- fin contenu -->
-		<div class="contenu">
-Nous avions 21 bits pour la partie réseau, il en reste 11 pour les hosts, soit 2<sup>11</sup>-2 = 2046 machines (sans adresses réseau et diffusion)
-        </div><!-- fin contenu -->
+				<div class="boite_onglets">
+					<ul class="onglets">
+						<li class="onglet">Une piste...</li>
+						<li class="onglet">Une correction...</li>
+				  </ul>
+					<div class="zone_boite">
+						<div class="contenu">
+							<p>On regarde combien de bits étaient attribués à la partie host du masque...</p>
+						</div><!-- fin contenu -->
+						<div class="contenu">
+							<p>Nous avions 21 bits pour la partie réseau, il en reste 11 pour les hosts, soit 2<sup>11</sup>-2 = 2046 machines (sans adresses réseau et diffusion)</p>
+        		</div><!-- fin contenu -->
 
-	</div><!-- fin zone_boite -->
-</div><!-- fin boite_onglets -->
+					</div><!-- fin zone_boite -->
+				</div><!-- fin boite_onglets -->
 <!-- ******************** Fin de la Boîte à onglets ********************* -->
 
-            <h2>Question 4</h2>
-            <p>Donner l'adresse de broadcast de ce réseau ?</p>
-
+        <h2>Question 4</h2>
+          <p>Donner l'adresse de broadcast de ce réseau ?</p>
         <!-- ******************* Début de la Boîte à onglets ******************** -->
-<div class="boite_onglets">
-	<ul class="onglets">
-		<li class="onglet">Une piste...</li>
-		<li class="onglet">Une correction...</li>
-    </ul>
-	<div class="zone_boite">
-		<div class="contenu">
-A partir de l'adresse réseau et du nombre de machines, on trouve l'extrémité haute du réseau.
-        </div><!-- fin contenu -->
-		<div class="contenu">
-Le réseau s'étend de 172.16.8.0 -> 172.16.15.0, l'adresse de broadcast est donc 172.16.15.255.
-        </div><!-- fin contenu -->
-
-	</div><!-- fin zone_boite -->
-</div><!-- fin boite_onglets -->
+				<div class="boite_onglets">
+					<ul class="onglets">
+						<li class="onglet">Une piste...</li>
+						<li class="onglet">Une correction...</li>
+				   </ul>
+					<div class="zone_boite">
+							<div class="contenu">
+								<p>A partir de l'adresse réseau et du nombre de machines, on trouve l'extrémité haute du réseau.</p>
+		        	</div><!-- fin contenu -->
+							<div class="contenu">
+								<p>Le réseau s'étend de 172.18.8.0 -> 172.18.15.0, l'adresse de broadcast est donc 172.18.15.255.</p>
+		      		</div><!-- fin contenu -->
+					</div><!-- fin zone_boite -->
+				</div><!-- fin boite_onglets -->
 <!-- ******************** Fin de la Boîte à onglets ********************* -->
-
-            <h2>Question 5</h2>
-            <p>Proposer un découpage d’adressage IP pour le réseau du lycée Chaplin composés de 3 sites :
-                <ul class="enum">
-            <li>Site Esplanade qui dispose de ~700 machines connectées (dont la machine en 172.16.15.100/21)</li>
-            <li>Site Sully ~300 machines</li>
-            <li>Site SI, STI et ISN ~350 machines</li>
-            </ul></p>
-
-        <!-- ******************* Début de la Boîte à onglets ******************** -->
-<div class="boite_onglets">
-	<ul class="onglets">
-		<li class="onglet">Une piste...</li>
-		<li class="onglet">Une correction...</li>
-    </ul>
-	<div class="zone_boite">
-		<div class="contenu">
-300 et 350 sont compris entre 0 et 512.
-            <br>
-700 est compris entre 512 et 1024.
-        </div><!-- fin contenu -->
-		<div class="contenu">
-SI,STI,ISN : 172.16.8.0 → 172.16.9.255 (512 adresses)<br>
-Sully : 172.16.10.0 → 172.16.11.255 (512 adresses)<br>
-Esplanade: 172.16.12.0 → 172.16.15.255 (1024 adresses)<br><br>
-A noter qu'il ne s'agit pas du vrai adressage de Chaplin ...
-
-        </div><!-- fin contenu -->
-
-	</div><!-- fin zone_boite -->
-</div><!-- fin boite_onglets -->
-
-		</article>
-
-        <hr>
-        <hr>
-      <h2>Source des exercices</h2>
-        <p>
+      	<h2>Question 5</h2>
+        <p>Proposer un découpage d’adressage IP pour le réseau du lycée Aragon Picasso composés de 3 sites :</p>
         <ul class="enum">
-        <li><a href="http://www.inetdoc.net/articles/adressage.ipv4/adressage.ipv4.exercises.html" target=_blank>Inetdoc</a></li>
-        <li><a href="http://reseaux-informatique-ista.blogspot.com/2014/02/ExercicescorrigeesenReseauinformatique.html" target=_blank>
-ISTA : Institut Spécialisé de Technologie Appliquée</a></li></ul></p>
-
-
-	</section>
-
-	</div>
+            <li>Site Aragon qui dispose de ~700 machines connectées (dont la machine en 172.18.15.100/21)</li>
+            <li>Site Picasso ~300 machines</li>
+            <li>Site SI, STI2D  ~350 machines</li>
+        </ul>
+        <!-- ******************* Début de la Boîte à onglets ******************** -->
+				<div class="boite_onglets">
+						<ul class="onglets">
+							<li class="onglet">Une piste...</li>
+							<li class="onglet">Une correction...</li>
+					    </ul>
+					<div class="zone_boite">
+						<div class="contenu">
+							<p>300 et 350 sont compris entre 0 et 512.</p>
+            <br>
+							<p>700 est compris entre 512 et 1024.</p>
+        		</div><!-- fin contenu -->
+						<div class="contenu">
+							<p>SI,STI,ISN : 172.18.8.0 → 172.18.9.255 (512 adresses)<br>
+								Sully : 172.18.10.0 → 172.18.11.255 (512 adresses)<br>
+								Esplanade: 172.18.12.0 → 172.18.15.255 (1024 adresses)<br><br>
+								A noter qu'il ne s'agit pas du vrai adressage du Aragon ...</p>
+        		</div><!-- fin contenu -->
+					</div><!-- fin zone_boite -->
+				</div><!-- fin boite_onglets -->
+			</article>
+        <hr>
+        <hr>
+      	<h2>Source des exercices</h2>
+        	<p>
+        		<ul class="enum">
+        			<li><a href="http://www.inetdoc.net/articles/adressage.ipv4/adressage.ipv4.exercises.html" target="_blank">Inetdoc</a></li>
+        			<li><a href="http://reseaux-informatique-ista.blogspot.com/2014/02/ExercicescorrigeesenReseauinformatique.html" target="_blank">ISTA : Institut Spécialisé de Technologie Appliquée</a></li></ul></p>
+		</div>
 	<script src="js/classie.js"></script>
-		<script src="js/gnmenu.js"></script>
-		<script>
-			new gnMenu( document.getElementById( 'gn-menu' ) );
-		</script>
+	<script src="js/gnmenu.js"></script>
+	<script>new gnMenu( document.getElementById( 'gn-menu' ) );</script>
 	</body>
 </html>
